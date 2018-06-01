@@ -1,12 +1,16 @@
-<div>
-    <h1><a href="/">Indrakala Sewing Center</a></h1>
-</div>
 
-{% for order in orders %}
-    <div>
-        <h1><a href="">{{ order.name }}</a></h1>
-        <p>order date: {{ order.order_date }}</p>
-        <p>clothing: {{ order.clothing|linebreaksbr }}</p>
-        <p>{{ order.price|linebreaksbr }}</p>
-    </div>
-{% endfor %}
+
+
+
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for order in orders %}
+	    <div>
+	        <h1><a href="{% url 'order_detail' pk=order.pk %}">{{ order.name }}</a></h1>
+	        <p>order date: {{ order.order_date }}</p>
+	        <p>clothing: {{ order.clothing|linebreaksbr }}</p>
+	        <p>{{ order.price|linebreaksbr }}</p>
+	    </div>
+	{% endfor %}
+{% endblock %}
