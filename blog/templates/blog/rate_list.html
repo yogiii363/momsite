@@ -1,0 +1,22 @@
+
+{% extends 'blog/base.html' %}
+
+<div class="block">
+{% block content %}
+	<div class="wrapper col-md-12">
+		<div class="mainContent"><h3>Clothing</h3></div>
+		<div class="mainContent"><h3>Price</h3></div>   
+			        
+	</div>
+    {% for rate in rates %}
+        <div class="wrapper col-md-12">
+
+	    	<div class="mainContent"><h4>{{ rate.cloth_name }}</h4></div>
+	    	<div class="mainContent"><h4>{{ rate.cloth_rate }}</h4></div>        
+	        
+	    </div>
+    {% endfor %}
+	
+{% endblock %}
+
+</div>

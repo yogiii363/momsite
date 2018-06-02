@@ -4,16 +4,24 @@
         <title>Indrakala Sewing</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
 	    <div class="page-header">
-	        <h1><a href="/">Indrakala Sewing</a></h1>
+	    <div id="options" style="color: white; float: right;">
+		    	{% if user.is_authenticated %}
+		    	<a href="{% url 'order_new' %}" class="top-menu" ><span class="glyphicon glyphicon-plus"></span></a>
+		    {% endif %}
+		    <a href="{% url 'rate_list' %}" class="top-menu" style="float: right;">Rate List</a>
 	    </div>
-	    <div class="content container">
-	        <div class="row">
-	            <div class="col-md-8">
+	    <div id="brandname"><h1><a href="/">Indrakala Sewing Center</a></h1>
+		</div>
+	    
+	    </div>
+	    <div class="content container col-md-12">
+	        <div class="row col-md-12">
+	            <div class="col-md-12">
 	            {% block content %}
 	            {% endblock %}
 	            </div>

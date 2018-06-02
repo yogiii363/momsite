@@ -3,14 +3,25 @@
 
 
 {% extends 'blog/base.html' %}
-
+				
 {% block content %}
+	<div class="wrapper col-md-12">
+			    	<div class="mainContent"><h3>Customer</h3></div>
+			    	<div class="mainContent"><h3>Order Date</h3></div>
+			    	<div class="mainContent"><h3>Clothes</h3></div>
+			    	<div class="mainContent"><h3>Cost</h3></div>
+			    	<div class="mainContent"><h3>Completion Date</h3></div>	        
+			        
+	</div>	
     {% for order in orders %}
-	    <div>
-	        <h1><a href="{% url 'order_detail' pk=order.pk %}">{{ order.name }}</a></h1>
-	        <p>order date: {{ order.order_date }}</p>
-	        <p>clothing: {{ order.clothing|linebreaksbr }}</p>
-	        <p>{{ order.price|linebreaksbr }}</p>
+	    <div class="wrapper col-md-12">
+
+	    	<div class="mainContent"><h4><a href="{% url 'order_detail' pk=order.pk %}">{{ order.name }}</a></h4></div>
+	    	<div class="mainContent"><h4>{{ order.order_date }}</h4></div>
+	    	<div class="mainContent"><h4>{{ order.clothing|linebreaksbr }}</h4></div>
+	    	<div class="mainContent"><h4>{{ order.price|linebreaksbr }}</h4></div>
+	    	<div class="mainContent"><h4>{{ order.completion_date }}</h4></div>	        
+	        
 	    </div>
 	{% endfor %}
 {% endblock %}

@@ -1,24 +1,19 @@
 h1 a {
     color: skyblue;
-    font-family: 'Lobster';
+    font-family: 'Poppins';
 }
-h2 {
-	font-weight: bold;
-	color: grey;
-	font-size: 50px;
-}
-body {
-    padding-left: 15px;
+.top-menu{
+    font-family: 'Poppins';
 }
 .page-header {
-    background-color: #ff9400;
+    text-align: center;
+    background-color: black;
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    padding: 25px 40px 40px 40px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #ffffff;
-    font-size: 36pt;
     text-decoration: none;
 }
 
@@ -27,7 +22,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Poppins', cursive;
 }
 
 .date {
@@ -59,4 +54,67 @@ h1, h2, h3, h4 {
 
 .comment {
     margin: 20px 0px 20px 20px;
+}
+#brandname{
+    width: 33%;  
+    margin-left: 33%;
+}
+#options{
+    font-size: 10px;
+    width: 33%;
+}
+
+
+
+.wrapper,
+        .mainContent,
+        .sideBar { 
+            //change the box model for simplicity
+            -webkit-box-sizing: border-box;
+               -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+        }
+        
+        .wrapper {
+            text-align: center;
+            margin:auto;
+            margin-top: 1%;
+            font-size: 1em;
+            padding: 1.5em;
+            width: 94%;
+            background-color: white;
+            margin-bottom: 1%;
+            border-radius: 5px;
+        }
+        
+        .mainContent,
+        .sideBar {
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+        }
+        
+        @media (min-width: 700px) {
+        
+            .mainContent {
+                margin-left: 0.5%;
+                margin-right: 0.5%;
+                margin-bottom: 1%;
+                width: 15%;           }
+        
+            .sideBar { 
+                border-radius: 5px;
+                width: 22%; 
+                background-color: grey;
+                 }
+        }
+
+.table{
+    background-color: cyan;
+}
+
+.block{
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
 }

@@ -7,6 +7,10 @@
                 {{ order.order_date }}
             </div>
         {% endif %}
+        {% if user.is_authenticated %}
+        <a class="btn btn-default" href="{% url 'order_edit' pk=order.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="btn btn-default" href="{% url 'order_remove' pk=order.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+	    {% endif %}        
         <h1>{{ order.name }}</h1>
         <p>{{ order.clothing|linebreaksbr }}</p>
         <p>{{ order.price|linebreaksbr }}</p>
